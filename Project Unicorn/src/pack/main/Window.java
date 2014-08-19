@@ -22,6 +22,8 @@ public class Window {
 		
 		panel = new JPanel();
 		
+		
+		
 		frame = new JFrame(title);
 		frame.add(panel);
 		frame.setSize(width, height);
