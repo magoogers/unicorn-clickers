@@ -7,8 +7,6 @@ import com.sun.glass.ui.Window;
 
 public class GameState {
 
-	
-	
 	public void init(Window w){
 		
 		
@@ -24,8 +22,6 @@ public class GameState {
 		
 	}
 	public int getID(){
-		
-		
 		return 0;
 	}
 }
