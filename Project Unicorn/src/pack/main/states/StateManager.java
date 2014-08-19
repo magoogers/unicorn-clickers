@@ -28,10 +28,10 @@ public class StateManager {
 		
 	}
 	public int getState(){
-		return 1;
 		
 		
-		if(bool1 = true){
+		
+		if(bool1 == true){
 			return 1;
 			
 			
@@ -41,8 +41,7 @@ public class StateManager {
 			return 2;
 	
 		}
-		
-		
+		return 1;
 		
 		
 	}
