@@ -19,5 +19,7 @@ public class Graphics {
 		panel.add(label);
 	}
 	
+	
+	
 
 }
