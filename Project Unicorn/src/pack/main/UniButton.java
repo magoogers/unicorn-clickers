@@ -1,8 +1,15 @@
 package pack.main;
 
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+
 public class UniButton {
-		
-	public UniButton(Counter count) {
+	
+	Image unicorn;
+	
+	public UniButton() {
+		unicorn = new ImageIcon("").getImage();
 		
 		
 	}
