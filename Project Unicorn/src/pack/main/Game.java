@@ -12,6 +12,9 @@ public class Game implements Runnable{
 	public void run() {
 		while(isRunning == true) {
 			
+			
+			
+			
 		}
 	}
 	
