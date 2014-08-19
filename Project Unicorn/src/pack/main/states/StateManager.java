@@ -32,13 +32,13 @@ public class StateManager {
 		
 		
 		if(bool1 == true){
-			return 1;
+			return state1;
 			
 			
 		}
 		if(bool2 == true){
 			
-			return 2;
+			return state2;
 	
 		}
 		return 1;

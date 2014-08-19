@@ -1,16 +1,36 @@
 package pack.main;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Window {
 	JFrame frame;
+	JPanel panel;
+	boolean isrunning = true;
 	public Window(int width, int height, String title) {
+		
+		panel = new JPanel();
+		
 		frame = new JFrame(title);
+		frame.add(panel);
 		frame.setSize(width, height);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+		
+		frame.addWindowListener( new WindowAdapter()
+		{
+		    public void windowClosing(WindowEvent e)
+		    {
+		    
+
+		        isrunning = false;
+		    }
+		});
 	}
 	
 	public void resize(int width, int height) {
@@ -23,5 +43,15 @@ public class Window {
 	
 	public void undecorate(boolean undecorate) {
 		
+	}
+	public JPanel getPanel(){
+		
+		return panel;
+	}
+	public boolean getRunning(){
+		
+		
+		
+		return isrunning;
 	}
 }
