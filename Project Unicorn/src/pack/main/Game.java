@@ -1,4 +1,4 @@
-package pack.Main;
+package pack.main;
 
 
 public class Game implements Runnable{
