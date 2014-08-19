@@ -17,7 +17,7 @@ public class Menu extends GameState{
 		
 	}
 	public void render( Window window,Graphics g){
-		
+		g.drawString("hello",100,100);
 		
 	}
 	public void update(Window w,Input i){

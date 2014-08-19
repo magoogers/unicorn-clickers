@@ -1,5 +1,6 @@
 package pack.main.render;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Graphics {
@@ -11,7 +12,11 @@ public class Graphics {
 		
 		
 	}
-	
+	public void drawString(String string,int x,int y){
+		JLabel label = new JLabel(string);
+		label.setLocation(x, y);
+		panel.add(label);
+	}
 	
 
 }
