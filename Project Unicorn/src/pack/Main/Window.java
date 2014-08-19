@@ -22,6 +22,6 @@ public class Window {
 	}
 	
 	public void undecorate(boolean undecorate) {
-		frame
+		
 	}
 }
