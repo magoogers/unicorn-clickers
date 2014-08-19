@@ -13,6 +13,7 @@ public class Graphics {
 		
 	}
 	public void drawString(String string,int x,int y){
+		System.out.println("hello");
 		JLabel label = new JLabel(string);
 		label.setLocation(x, y);
 		panel.add(label);

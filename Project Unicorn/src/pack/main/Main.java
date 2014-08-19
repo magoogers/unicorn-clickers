@@ -16,15 +16,18 @@ public class Main implements Runnable{
 	static Input i;
 	public static void main(String args[]) {
 		window = new Window(800, 600, "Unicorn Clicker v1.0");
-		sm = new StateManager(menu.getID(),2);
+		sm = new StateManager(0,2);
 		g = new Graphics(window.getPanel());
 		menu = new Menu();
 		i = new Input();
+		
+		
 	}
 	
 	public void run() {
 		if(sm.getState() == menu.getID()){
-			
+
+		g.drawString("hello",100,100);
 			menu.init(window);
 		}
 		while(window.getRunning()) {
