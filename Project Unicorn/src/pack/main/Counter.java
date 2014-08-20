@@ -8,7 +8,6 @@ public class Counter {
 		
 		while(true) {
 			g.drawString("Hello", x, y);
-			counts += increment(1);
 		}
 		
 		
@@ -17,6 +16,12 @@ public class Counter {
 	public int increment(int add) {
 		return add;
 	}
+	
+	public int decrement(int remove) {
+		return remove;
+	}
+	
+	
 	
 	
 }
