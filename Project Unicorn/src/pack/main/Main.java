@@ -3,6 +3,7 @@ package pack.main;
 import java.awt.Graphics;
 
 import pack.main.game.Menu;
+import pack.main.input.Input;
 import pack.main.states.StateManager;
 
 
@@ -17,11 +18,11 @@ public class Main implements Runnable{
 	public static void main(String args[]) {
 		window = new Window(100, 100, "Unicorn Clicker v1.0");
 		sm = new StateManager(0,2);
-		g = new Graphics(window.getPanel());
+		
 		menu = new Menu();
 		i = new Input();
 		
-		UniButton ub = new UniButton();
+		
 	}
 	
 	public void run() {
@@ -32,8 +33,8 @@ public class Main implements Runnable{
 		}
 		while(window.getRunning()) {
 			if(sm.getState() == menu.getID()){
-				menu.render(window, g);
-				menu.update(window, i);
+				menu.render(window,sm);
+				menu.update(window, i,sm);
 				
 			}
 			
