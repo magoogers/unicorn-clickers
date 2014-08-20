@@ -1,5 +1,7 @@
 package pack.main;
 
-public class Game {
+
+
+public class Game extends BasicGameState{
 
 }
