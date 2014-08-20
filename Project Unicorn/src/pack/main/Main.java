@@ -16,7 +16,7 @@ public class Main implements Runnable{
 	static Menu menu;
 	static Input i;
 	public static void main(String args[]) {
-		window = new Window(100, 100, "Unicorn Clicker v1.0");
+		window = new Window(800, 600, "Unicorn Clicker v1.0");
 		sm = new StateManager(0,2);
 		
 		menu = new Menu();
