@@ -7,6 +7,9 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
+import pack.states.Menu;
+import pack.states.Play;
+
 public class Game extends StateBasedGame{
 	
 	private static final String name = "Project Unicorn";
