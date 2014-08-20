@@ -1,8 +1,8 @@
 package pack.main;
 
+import java.awt.Graphics;
+
 import pack.main.game.Menu;
-import pack.main.input.Input;
-import pack.main.render.Graphics;
 import pack.main.states.StateManager;
 
 
