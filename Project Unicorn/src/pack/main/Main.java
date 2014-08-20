@@ -41,10 +41,7 @@ public class Main implements Runnable{
 		
 	}
 	
-	public void render(Graphics g) {
-		Counter count = new Counter(10, 10, g);
-		
-	}
+	
 	
 	
 }
