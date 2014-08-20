@@ -18,6 +18,9 @@ public class Window {
 	JButton b1;
 	
 	boolean isrunning = true;
+	
+	
+	
 	public Window(int width, int height, String title) {
 		
 		panel = new JPanel();
