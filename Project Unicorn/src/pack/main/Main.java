@@ -12,12 +12,12 @@ public class Main implements Runnable{
 	private boolean isRunning = true;
 	static Graphics g = null;
 	static Window window;
-	static StateManager sm;
+	//static StateManager sm;
 	static Menu menu;
 	static Input i;
 	public static void main(String args[]) {
 		window = new Window(800, 600, "Unicorn Clicker v1.0");
-		sm = new StateManager(0,2);
+		//sm = new StateManager(0,2);
 		
 		menu = new Menu();
 		i = new Input();
@@ -26,17 +26,17 @@ public class Main implements Runnable{
 	}
 	
 	public void run() {
-		if(sm.getState() == menu.getID()){
+		//if(sm.getState() == menu.getID()){
 
-		g.drawString("hello",100,100);
-			menu.init(window);
-		}
+		//g.drawString("hello",100,100);
+			//menu.init(window);
+		//}
 		while(window.getRunning()) {
-			if(sm.getState() == menu.getID()){
-				menu.render(window,sm);
-				menu.update(window, i,sm);
+			//if(sm.getState() == menu.getID()){
+				//menu.render(window,sm);
+				//menu.update(window, i,sm);
 				
-			}
+			//}
 			
 			
 			
