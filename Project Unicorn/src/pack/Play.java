@@ -6,29 +6,32 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class Menu extends BasicGameState{
+import pack.objects.UniButton;
 
+public class Play extends BasicGameState{
 	
-	public Menu(int menu) {
+	UniButton butt = new UniButton();
+
+	public Play(int play) {
 	}
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
 		
-	}
-
-	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
 		
 	}
 	
-	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+		butt.render(g);
 		
+	}
+
+	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+		butt.update();
 		
 	}
 
 	public int getID() {
-		return 0;
+		return 1;
 	}
-
-	
 
 }
