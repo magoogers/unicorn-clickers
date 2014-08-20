@@ -9,9 +9,8 @@ import org.newdawn.slick.state.StateBasedGame;
 import pack.objects.UniButton;
 
 public class Play extends BasicGameState{
-	
 	UniButton butt = new UniButton();
-
+	
 	public Play(int play) {
 	}
 
@@ -21,8 +20,7 @@ public class Play extends BasicGameState{
 	}
 	
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
-		butt.render(g);
-		
+		butt.render(g, 10, 10);
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
