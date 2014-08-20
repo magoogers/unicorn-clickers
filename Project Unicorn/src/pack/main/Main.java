@@ -34,12 +34,17 @@ public class Main implements Runnable{
 				//menu.update(window, i,sm);
 				
 			//}
-			
-			
-			
 		}
+		
+		
+		
+		
 	}
 	
+	public void render(Graphics g) {
+		Counter count = new Counter(10, 10, g);
+		
+	}
 	
 	
 }
