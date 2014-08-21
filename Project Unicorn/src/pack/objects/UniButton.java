@@ -21,7 +21,7 @@ public class UniButton extends Button{
 		mouseX = Mouse.getX();
 		mouseY = Mouse.getY();
 		
-		if((mouseX>100 && mouseX<132) && (mouseY>100 && mouseY<132)) {
+		if((mouseX>10 && mouseX<100) && (mouseY>10 && mouseY<100)) {
 			isClicked = true;
 		}else {
 			isClicked = false;
@@ -31,8 +31,6 @@ public class UniButton extends Button{
 	public void render(Graphics g, int x, int y) {
 		imageX = x;
 		imageY = y;
-		
-		g.drawRect(12, 350, 38, 30);;
 		
 		g.drawString("MouseX: " + mouseX, 100, 150);
 		g.drawString("MouseY: " + mouseY, 100, 162);
