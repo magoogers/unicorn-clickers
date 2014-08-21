@@ -6,10 +6,12 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.Sound;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Shape;
 
 public class UniButton extends Button{
+	Sound lick;
 	
 	boolean isClicked = false;
 	Image button;
@@ -22,12 +24,18 @@ public class UniButton extends Button{
 	int mouseX;
 	int y,x,width,height;
 	private Shape mouse,uni;
+	
 	public UniButton(int x,int y,int width,int height){
 		this.x = x;
 		this.y = y;
 		this.height = width;
 		this.width = width;
 		
+		try {
+			lick = new Sound("res/lick.wav");
+		} catch (SlickException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
@@ -40,6 +48,7 @@ public class UniButton extends Button{
 		
 		if(mouse.intersects(uni) && i.isMousePressed(0) ) {
 			isClicked = true;
+			lick.play();
 		}else {
 			isClicked = false;
 		}
@@ -78,4 +87,4 @@ public class UniButton extends Button{
 		
 	}
 }
->>>>>>> 01ab3176ba85c6c15e2bfbcdf0a7f8711fc40412
+

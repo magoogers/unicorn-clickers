@@ -24,7 +24,7 @@ public class Play extends BasicGameState{
 	}
 
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
-		butt.update(gc,delta);
+		butt.update(gc);
 		
 	}
 
