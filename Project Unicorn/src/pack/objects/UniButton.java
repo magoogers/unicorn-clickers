@@ -3,6 +3,7 @@ package pack.objects;
 import org.lwjgl.input.Mouse;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 
 public class UniButton extends Button{
@@ -20,8 +21,10 @@ public class UniButton extends Button{
 	public void update() {
 		mouseX = Mouse.getX();
 		mouseY = Mouse.getY();
+		Input in = new Input(1);
 		
 		if((mouseX>10 && mouseX<100) && (mouseY>10 && mouseY<100)) {
+			
 			isClicked = true;
 		}else {
 			isClicked = false;
