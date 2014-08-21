@@ -20,7 +20,7 @@ public class Menu extends BasicGameState{
 		
 	}
 	
-	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
+	public void update(GameContainer gc, StateBasedGame sbg) throws SlickException {
 		
 		
 	}
