@@ -34,7 +34,7 @@ public class UniButton extends Button{
 	public void update(GameContainer gc) {
 		mouseX = Mouse.getX();
 		mouseY = Mouse.getY();
-		mouse = new Rectangle(mouseX,-mouseY+600,1,1);
+		mouse = new Rectangle(mouseX,-mouseY+gc.getHeight(),1,1);
 		uni = new Rectangle(x,y,width,height);
 		Input i = gc.getInput();
 		
@@ -49,13 +49,13 @@ public class UniButton extends Button{
 		
 		
 		
-		g.drawString(x+"   "+y,400,400);
+		
 		g.drawString("MouseX: " + mouseX, 25,25);
 		g.drawString("MouseY: " + mouseY, 25,50);
 		
 		
 		
-			button = new Image("res/Unicorn.png");
+			button = new Image("res/Unicorn 2.0.png");
 	
 		g.drawImage(button,x,y);
 		
