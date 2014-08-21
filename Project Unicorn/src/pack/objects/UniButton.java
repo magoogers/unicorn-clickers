@@ -31,7 +31,7 @@ public class UniButton extends Button{
 	}
 	
 	
-	public void update(GameContainer gc) {
+	public void update(GameContainer gc)  {
 		mouseX = Mouse.getX();
 		mouseY = Mouse.getY();
 		mouse = new Rectangle(mouseX,-mouseY+gc.getHeight(),1,1);
@@ -42,6 +42,13 @@ public class UniButton extends Button{
 			isClicked = true;
 		}else {
 			isClicked = false;
+		}
+		
+		if(isClicked){
+			
+			count();
+			
+			
 		}
 	}
 	
@@ -59,14 +66,15 @@ public class UniButton extends Button{
 	
 		g.drawImage(button,x,y);
 		
-		if(isClicked) {
-			count();
-		}
-		
 		g.drawString("Clicks: " + clicks, 100, 100);
 	}
 	
 	public void count() {
-		clicks++;
+	
+			
+			clicks++;
+			
+			
+		
 	}
 }
