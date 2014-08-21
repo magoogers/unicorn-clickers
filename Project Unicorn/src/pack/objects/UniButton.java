@@ -6,6 +6,8 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Rectangle;
+import org.newdawn.slick.geom.Shape;
 
 public class UniButton extends Button{
 	
@@ -19,6 +21,7 @@ public class UniButton extends Button{
 	int mouseY;
 	int mouseX;
 	int y,x,width,height;
+	private Shape mouse,uni;
 	public UniButton(int x,int y,int width,int height){
 		this.x = x;
 		this.y = y;
@@ -31,10 +34,11 @@ public class UniButton extends Button{
 	public void update(GameContainer gc) {
 		mouseX = Mouse.getX();
 		mouseY = Mouse.getY();
-		
+		mouse = new Rectangle(mouseX,-mouseY+600,1,1);
+		uni = new Rectangle(x,y,width,height);
 		Input i = gc.getInput();
 		
-		if((mouseX>x && mouseX<x+width) && (mouseY>y-height)&&mouseY<y && i.isMousePressed(0)) {
+		if(mouse.intersects(uni) && i.isMousePressed(0) ) {
 			isClicked = true;
 		}else {
 			isClicked = false;
@@ -44,15 +48,16 @@ public class UniButton extends Button{
 	public void render(Graphics g) throws SlickException {
 		
 		
-		g.drawRect(12, 350, 38, 30);;
 		
-		g.drawString("MouseX: " + mouseX, 100, 150);
-		g.drawString("MouseY: " + mouseY, 100, 162);
+		g.drawString(x+"   "+y,400,400);
+		g.drawString("MouseX: " + mouseX, 25,25);
+		g.drawString("MouseY: " + mouseY, 25,50);
+		
 		
 		
 			button = new Image("res/Unicorn.png");
 	
-		g.drawImage(button, x, y-height);
+		g.drawImage(button,x,y);
 		
 		if(isClicked) {
 			count();

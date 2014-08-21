@@ -9,7 +9,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import pack.objects.UniButton;
 
 public class Play extends BasicGameState{
-	UniButton butt = new UniButton(200,200,32,32);
+	UniButton butt = new UniButton(400,500,32,32);
 	
 	public Play(int play) {
 	}
