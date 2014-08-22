@@ -16,7 +16,7 @@ public class Menu extends BasicGameState{
 	}
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
-		backmusic = new Music("res/Background Music.MP3");
+	
 	}
 
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
@@ -24,7 +24,7 @@ public class Menu extends BasicGameState{
 	}
 	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
-		backmusic.loop();
+		
 		
 	}
 

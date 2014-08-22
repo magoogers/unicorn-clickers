@@ -86,5 +86,11 @@ public class UniButton extends Button{
 			
 		
 	}
+	public boolean getClicked(){
+		
+		
+		return isClicked;
+	}
+	
 }
 

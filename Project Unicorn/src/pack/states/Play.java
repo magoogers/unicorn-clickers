@@ -20,7 +20,10 @@ public class Play extends BasicGameState{
 	Random ran = new Random();
 	ArrayList<Numbers> num;
 	int i,u;
-	Numbers noom;
+	Numbers n1,n2,n3,n4,n5,n6,n7,n8,n9,n10;
+	double add = 1.0;
+	
+	
 	public Play(int play) {
 		u = ran.nextInt();
 	 	i = ran.nextInt();
@@ -30,8 +33,19 @@ public class Play extends BasicGameState{
 
 	public void init(GameContainer gc, StateBasedGame sbg) throws SlickException {
 		num= new ArrayList<Numbers>();
-		noom = new Numbers("hello");
-		num.add(noom);
+		n1 = new Numbers(""+add);
+		num.add(n1);
+		n2 = new Numbers(""+add);
+		num.add(n2);
+		n3 = new Numbers(""+add);
+		num.add(n3);
+		n4 = new Numbers(""+add);
+		num.add(n4);
+		n5 = new Numbers(""+add);
+		num.add(n5);
+		n6 = new Numbers(""+add);
+		num.add(n6);
+		
 	}
 	
 	public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
@@ -46,6 +60,18 @@ public class Play extends BasicGameState{
 		for(Numbers a : num){
 			a.update(gc,delta);
 		}
+		
+		if(butt.getClicked()){
+			
+			for(Numbers a:num){
+				if(a.getY() <0){
+				a.setActive();
+				}
+				
+			}
+			
+		}
+		
 		Input i = gc.getInput();
 		
 		

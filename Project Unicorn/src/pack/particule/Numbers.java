@@ -17,9 +17,13 @@ public class Numbers {
 		this.x= x;
 		this.y = y;
 		
+		x=ran.nextInt(100);
+		y=ran.nextInt(100);
+		
 	}
 	public void render(Graphics g){
 		if(active){
+			g.drawString("" +y,600,600);
 		g.drawString(thing,x,y);
 		}
 		
@@ -35,23 +39,30 @@ public class Numbers {
 		
 		
 		
-		if(y>gc.getHeight()){
+		if(y<-10){
 			
 			
 		active = false;	
 		}
 		}
 		
-		if(i.isMouseButtonDown(0)){
-			
-			active = true;
-			
-			x=1+(int)ran.nextInt();
-			
-		}
+		
 		
 	}
 	
 	
-	
+	public void setActive(){
+		
+		active = true;
+		x=ran.nextInt(300);
+		y=ran.nextInt(400);
+		
+		
+	}
+	public int getY(){
+		return (int)y;
+		
+		
+		
+	}
 }
